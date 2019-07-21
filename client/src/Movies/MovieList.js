@@ -7,7 +7,7 @@ import axios from 'axios';
 const MovieList = props => {
   const [movies, setMovies] = useState([])
   useEffect(() => {
-    console.log('a')
+    
     const getMovies = () => {
       axios
         .get('http://localhost:5000/api/movies')

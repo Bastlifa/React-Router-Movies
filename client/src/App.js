@@ -10,17 +10,16 @@ const App = () => {
   const addToSavedList = movie => {
     setSaveList([...savedList, movie]);
   };
+  console.log('a')
+  return (
+    <div>
+      <SavedList list={savedList} />
+      
+      <Route exact path="/" component={MovieList} />
+      <Route path="/movies/:id" component={Movie} />
+    </div>
+  );
 
-  
-    return (
-      <div>
-        <SavedList list={savedList} />
-        <div>Replace this Div with your Routes</div>
-        <Route exact path="/" component={MovieList} />
-        <Route path="/movies/:id" component={Movie} />
-      </div>
-    );
-  
 }
 
 export default App;
